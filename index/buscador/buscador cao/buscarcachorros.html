@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');    
+    body {
+            background: #F3E6DE;
+        }  
+
+        .imagem{
+            position: absolute;
+            top: -25px;
+            left: 15px;
+        }
+
+        .logo{
+            position: absolute;
+            top: 75px;
+            left: 100px;
+            font-family: 'Suez One', serif;
+        }
+        .fundo{
+            position: absolute;
+            background-color: #cfcbc9 ;
+            width: 350px;
+            height: 660px;
+            right: 1000px;
+            top: 0px;
+        }
+        .coluna0{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 130px;
+            background-color: #ffffff;
+            border-radius: 10%;   
+        }
+        .coluna1{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 200px;
+            background-color: #ffffff;
+            border-radius: 10%;         
+        }
+        
+        .coluna2{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 270px;
+            background-color: #ffffff;
+            border-radius: 10%;  
+        }
+        .coluna3{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 340px;
+            background-color: #ffffff;
+            border-radius: 10%;  
+        }
+        .coluna4{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 410px;
+            background-color: #ffffff;
+            border-radius: 10%;  
+        }
+        .coluna5{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 480px;
+            background-color: #ffffff;
+            border-radius: 10%;  
+        }
+        .coluna6{
+            position: absolute;
+            height: 60px;
+            width: 225px;
+            right: 1050px;
+            top: 550px;
+            background-color: #ffffff;
+            border-radius: 10%;  
+        }
+        .coluna0text{
+            position: absolute;
+            top: 140px;
+            left: 105px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .coluna1text{
+            position: absolute;
+            top: 210px;
+            left: 105px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .coluna2text{
+            position: absolute;
+            top: 280px;
+            left: 75px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .coluna3text{
+            position: absolute;
+            top: 350px;
+            left: 85px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .coluna4text{
+            position: absolute;
+            top: 420px;
+            left: 110px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .coluna5text{
+            position: absolute;
+            top: 490px;
+            left: 80px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .coluna6text{
+            position: absolute;
+            top: 560px;
+            left: 85px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .cachorro1fundo{
+            position: absolute;
+            background-color: #cfcbc9 ;
+            width: 250px;
+            height: 250px;
+            right: 580px;
+            top: 40px;
+            border-radius: 15%;
+        }
+        .cachorro1{
+            position: absolute;
+            top: 70px;
+            left: 500px;
+            width: 200px;
+            border-radius: 15%;
+        }
+        .cachorro1text{
+            position: absolute;
+            top: 300px;
+            left: 470px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .cachorro2fundo{
+            position: absolute;
+            background-color: #cfcbc9 ;
+            width: 250px;
+            height: 250px;
+            right: 110px;
+            top: 40px;
+            border-radius: 15%;
+        }
+        .cachorro2{
+            position: absolute;
+            top: 70px;
+            left: 965px;
+            width: 200px;
+            border-radius: 15%;
+        }
+        .cachorro2text{
+            position: absolute;
+            top: 300px;
+            left: 960px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .cachorro3fundo{
+            position: absolute;
+            background-color: #cfcbc9 ;
+            width: 250px;
+            height: 250px;
+            right: 580px;
+            top: 340px;
+            border-radius: 15%;
+        }
+        .cachorro3{
+            position: absolute;
+            top: 370px;
+            left: 500px;
+            width: 200px;
+            border-radius: 15%;
+        }
+        .cachorro3text{
+            position: absolute;
+            top: 590px;
+            left: 490px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+        .cachorro4fundo{
+            position: absolute;
+            background-color: #cfcbc9 ;
+            width: 250px;
+            height: 250px;
+            right: 110px;
+            top: 340px;
+            border-radius: 15%;
+        }
+        .cachorro4{
+            position: absolute;
+            top: 370px;
+            right: 135px;
+            width: 200px;
+            border-radius: 15%;
+        }
+        .cachorro4text{
+            position: absolute;
+            top: 590px;
+            left: 960px;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="fundo"></div>
+    <img class="imagem" src="logo.png">
+    <div class="logo">Pet Locator</div>
+    <div class="coluna0"></div>
+    <div class="coluna1"></div>
+    <div class="coluna2"></div>
+    <div class="coluna3"></div>
+    <div class="coluna4"></div>
+    <div class="coluna5"></div>
+    <div class="coluna6"></div>
+    <div class="coluna0text">Raça</div>
+    <div class="coluna1text">Idade</div>
+    <div class="coluna2text">Tamanho</div>
+    <div class="coluna3text">Gênero</div>
+    <div class="coluna4text">Cor</div>
+    <div class="coluna5text">Castrado</div>
+    <div class="coluna6text">Vacinas</div>
+    <div class="cachorro1fundo"></div>
+    <img class="cachorro1" src="cachorro1.png">
+    <div class="cachorro1text">Pirulito | Idade: 12</div>
+    <div class="cachorro2fundo"></div>
+    <img class="cachorro2" src="cachorro2.png">
+    <div class="cachorro2text">Bauer | Idade: 9</div>
+    <div class="cachorro3fundo"></div>
+    <img class="cachorro3" src="cachorro3.png">
+    <div class="cachorro3text">Titita | Idade: 6</div>
+    <div class="cachorro4fundo"></div>
+    <img class="cachorro4" src="cachorro4.png">
+    <div class="cachorro4text">Zeus | Idade: 14</div>
+</body>
+</html>
