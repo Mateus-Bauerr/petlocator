@@ -1,11 +1,11 @@
 <?php
-$conn = mysqli_connect('localhost', 'laboratorio', 'estudante', 'projeto_integrador');
+$conn = mysqli_connect('localhost', 'ienh', 'ienh', 'mydb');
 if (!$conn) {
     die('Could not connect: ' . mysqli_error());
 }
 echo 'Connected successfully';
 
-$sql = "SELECT usuario, senha FROM usuarios";
+$sql = "SELECT CPF, Nome FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
