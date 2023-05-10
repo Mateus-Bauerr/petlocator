@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'ienh', 'ienh', 'mydb');
+$conn = mysqli_connect('127.0.0.1', 'ienh', 'ienh', 'mydb');
 if (!$conn) {
     die('Could not connect: ' . mysqli_error());
 }
