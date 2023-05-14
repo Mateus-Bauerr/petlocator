@@ -104,19 +104,23 @@
 </head>
 <body>
     
-    <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
-    <a class="letreiro" href="../../index.html">Pet Locator</a>
-    <div class="fundo"></div>
-    <div class="criarconta">Crie uma Conta</div>
-    <label class="nome"> Nome:<input type="text"></input></label>
-    <label class="sobrenome">Sobrenome:<input type="text"></input></label>
-    <label class="nascimento">Data que Nasceu:<input type="date"></input></label>
-    <label class="telefone">Telefone:<input type="number"></input></label>
-    <label class="endereco">Endereço:<input type="text"></input></label>
-    <label class="cpf">CPF:<input type="number"></input></label>
-    <label class="email">E-mail:<input></input></label>
-    <label class="senha">Senha:<input type="password"></input></label>
-    <button class="finalizar">Finalizar Cadastro</button>
-
+        <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
+        <a class="letreiro" href="../../index.html">Pet Locator</a>
+        <div class="fundo"></div>
+        <div class="banco_de_dados">
+            <form action="saveDatabase.php" method="post">
+                <a class="criarconta">Crie uma Conta</a>
+                <label class="nome">Nome:<input type="text"></input></label>
+                <label class="sobrenome">Sobrenome:<input type="text"></input></label>
+                <label class="nascimento">Data que Nasceu:<input type="date"></input></label>
+                <label class="telefone">Telefone:<input type="number"></input></label>
+                <label class="endereco">Endereço:<input type="text"></input></label>
+                <label class="cpf">CPF:<input type="number"></input></label>
+                <label class="email">E-mail:<input></input></label>
+                <label class="senha">Senha:<input type="password"></input></label>
+                <button class="finalizar">Finalizar Cadastro</button>
+            </form>
+        </div>
+    
 </body>
 </html>
