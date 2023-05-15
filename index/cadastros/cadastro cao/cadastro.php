@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', 'ienh', 'petlocator');
+$conn = mysqli_connect('localhost', 'root', 'ienh', 'mydb');
 if (!$conn) {
     die('Could not connect: ');
 }
