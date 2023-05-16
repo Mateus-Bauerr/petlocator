@@ -4,90 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Canil</title>
+    <title>Cadastro canil</title>
 
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+        
         body {
             background: #F3E6DE;
         }
-    .logo {
-    top: 60px;
-    position: absolute;
+
+        .logo {
+            position: absolute;
+            top: 60px;
         }
-    .criarconta {
-        position: absolute;
-        font-family: 'Suez One', serif;
-        font-size: 30px;
-        left: 565px;
-        }   
-    .letreiro{
-    position: absolute;
-    top: 160px;
-    left: 92px;
-    font-family: 'Suez One', serif;
-    color: black;
-    text-decoration: black;
+
+        .letreiro {
+            position: absolute;
+            top: 160px;
+            left: 92px;
+            font-family: 'Suez One', serif;
+            color: black;
+            text-decoration: black;
         }
-        
-    .logoResgate{
-    position: absolute;
-    max-width: 170px;
-    max-height: 170px;
-    width: auto;
-    height: auto;
-    top: 280px;
-    right: 308px;
+
+        .fundo {
+            position: absolute;
+            height: 700px;
+            width: 600px;
+            top: 85px;
+            left: calc(50% - 300px);
+            background-color: #cfcbc9;
+            border-radius: 10%; 
         }
-        
 
-    .nome {
-        text-align: center;
-        margin: 0px 10px 1500px 350px;   
-    }
+        .criarconta {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
 
-    .Telefone {
-        text-align: center;
-        margin: 0px 40px 1500px 350px;
-    }
+        label {
+            display: block;
+            margin: 30px 0;
+            text-align: center;
+            font-family: 'Suez One', serif;
+            font-size: 18px;
+        }
 
-    .Horario{
-        text-align: center;
-        margin: 0px 70px 1500px 350px;
-    }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"] {
+            display: block;
+            margin: 0 auto;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 250px;
+        }
 
-    .email{
-        text-align: center;
-        margin: 0px 100px 1500px 350px;
-    }
-
-    .button {
-        text-align: center;
-        margin: 0px 140px 1500px 350px;
-        font-family: 'Suez One', serif;
-    }
-
+        .finalizar {
+            display: inline-block;
+            padding: 10px;
+            margin: 30px 0 0 50%;
+            transform: translateX(-50%);
+            font-family: 'Suez One', serif;
+            background-color: #cfcbc9;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10%;
+        }
     </style>
-
 </head>
 <body>
-    <h1 class="criarconta">Cadastrar Canil</h1>
-    <img class="logo" src="../../banco de imagens/logosprincipais/logo.png"> 
-    <p> </p>
+    <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
     <a class="letreiro" href="../../index.html">Pet Locator</a>
-    <p> </p>
-    <label class="nome"> Nome:<input type="text"></input></label>
-    <label class="CNPJ">CNPJ:<input type="text"></input></label>
-    <p> </p>
-    <label class="Telefone">Telefone:<input type="number"></input></label>
-    <label class="Certificado">Certificado:<input type="text"></input></label>
-    <p> </p>
-    <label class="Horario">Horario:<input type="text"></input></label>
-    <label class="Capacidade">Capacidade:<input type="number"></input></label>
-    <p> </p>
-    <label class="email">E-mail:<input></input></label>
-    <label class="senha">Senha:<input type="password"></input></label>
-    <button>Finalizar Cadastro</button>
-
+    <div class="fundo">
+        <form action="saveDatabase.php" method="post">
+            <a class="criarconta">Cadestre seu canil</a>
+            <label class="nome">Nome:<input type="text"></label>
+            <label class="telefone">Telefone:<input type="number"></label>
+            <label class="funcionamento">Horario de funcionamento:<input type="text"></label>
+            <label class="certificado">Certificado:<input type="text"></label>
+            <label class="endereco">Endereço:<input type="text"></label>
+            <label class="cnpj">CNPJ:<input type="number"></label>
+            <label class="email">E-mail:<input type="email"></label>
+            <label class="senha">Senha:<input type="password"></input></label>
+            <a href="../../index.html"class="finalizar">Finalizar Cadastro</a>
+            </form>
+        </div>
+    
 </body>
 </html>
