@@ -85,22 +85,39 @@
     </style>
 </head>
 <body>
-    <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
-    <a class="letreiro" href="../../index.html">Pet Locator</a>
+
+
     <div class="fundo">
-        <form action="saveDatabase.php" method="post">
+        <form name="cadastroForm" action="cadastro.php" method="post" onsubmit="return validateForm()">
             <a class="criarconta">Cadestre seu canil</a>
-            <label class="nome">Nome:<input type="text"></label>
-            <label class="telefone">Sobrenome:<input type="text"></label>
-            <label class="funcionamento">Data de nascimento:<input type="date"></label>
-            <label class="certificado">Telefone:<input type="number"></label>
-            <label class="endereco">Endereço:<input type="text"></label>
-            <label class="cnpj">CNPJ:<input type="number"></label>
-            <label class="email">E-mail:<input type="email"></label>
-            <label class="senha">Senha:<input type="password"></input></label>
-            <a href="../../index.html"class="finalizar">Finalizar Cadastro</a>
-            </form>
-        </div>
-    
+            <label class="Nome">Nome:<input type="text" name="Nome"></input></label>
+            <label class="sobrenome">Sobrenome:<input type="text" name="sobrenome"></input></label>
+            <label class="Data_Nascimento">Data que Nasceu:<input type="date" name="Data_Nascimento"></input></label>
+            <label class="Telefone">Telefone:<input type="number" name="Telefone"></input></label>
+            <label class="Endereco">Endereço:<input type="text" name="Endereco"></input></label>
+            <label class="CPF">CPF:<input name="CPF" type="number"></input></label>
+            <label class="Email">E-mail:<input type="email" name="Email"></input></label>
+            <label class="senha">Senha:<input type="password" name="senha"></input></label>
+            <button class="finalizar">Finalizar Cadastro</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var cpf = document.forms["cadastroForm"]["CPF"].value;
+            var nome = document.forms["cadastroForm"]["Nome"].value;
+            var dataNascimento = document.forms["cadastroForm"]["Data_Nascimento"].value;
+            var telefone = document.forms["cadastroForm"]["Telefone"].value;
+            var endereco = document.forms["cadastroForm"]["Endereco"].value;
+            var email = document.forms["cadastroForm"]["Email"].value;
+            var senha = document.forms["cadastroForm"]["senha"].value;
+            var sobrenome = document.forms["cadastroForm"]["sobrenome"].value;
+
+            if (cpf === "" || nome === "" || dataNascimento === "" || telefone === "" || endereco === "" || email === "" || senha === "" || sobrenome === "") {
+                alert("Please fill all the required fields.");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
