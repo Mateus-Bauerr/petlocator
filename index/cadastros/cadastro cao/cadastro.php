@@ -1,20 +1,28 @@
 <?php
-$conn = mysqli_connect('127.0.0.1', 'root', '', 'mydb');
-if (!$conn) {
-    die('Could not connect: ' . mysqli_error());
-}
-echo 'Connected successfully';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $conn = mysqli_connect('localhost', 'root', 'ienh', 'mydb');
+    if (!$conn) {
+        die('Could not connect: ' . mysqli_connect_error());
+    }
 
-$sql = "SELECT CPF, Nome FROM users";
-$result = $conn->query($sql);
+    $CPF = $_POST["CPF"];
+    $Nome = $_POST["Nome"];
+    $Data_Nascimento = $_POST["Data_Nascimento"];
+    $Telefone = $_POST["Telefone"];
+    $Endereco = $_POST["Endereco"];
+    $Email = $_POST["Email"];
+    $senha = $_POST["senha"];
+    $sobrenome = $_POST["sobrenome"];
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "\n" . "usuario: " . $row["usuario"]. " - Senha: " . $row["senha"];
-  }
-} else {
-  echo "0 results";
+    $sql = "INSERT INTO users (CPF, Nome, Data_Nascimento, Telefone, Endereco, Email, senha, sobrenome) 
+            VALUES ('$CPF', '$Nome', '$Data_Nascimento', '$Telefone', '$Endereco', '$Email', '$senha', '$sobrenome')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "Cadastro realizado com sucesso";
+    } else {
+        echo "Erro ao cadastrar: " . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
 }
-$conn->close();
 ?>
