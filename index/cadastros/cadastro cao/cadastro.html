@@ -4,121 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro canil</title>
 
     <style> 
-    @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
-    body {
+        @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+        
+        body {
             background: #F3E6DE;
         }
 
-    .logo {
+        .logo {
+            position: absolute;
             top: 60px;
-            position: absolute;
         }
 
-    .criarconta {
-        position: absolute;
-        text-align: center;
-        margin: 100px 100px 1500px 567px;
-        font-family: 'Suez One', serif;
-        font-size: 30px;
-    }
-
-    .Nome {
-        position: absolute;
-        text-align: center;
-        margin: 155px 10px 1500px 420px;   
-    }
-
-    .sobrenome {
-        position: absolute;
-        text-align: center;
-        margin: 155px 0px 0px 650px;
-    }
-
-    .Data_Nascimento {
-        position: absolute;
-        text-align: center;
-        margin: 200px 0px 0px 351px;
-    }
-
-    .Telefone {
-        position: absolute;
-        text-align: center;
-        margin: 200px 0px 0px 666px;
-    }
-
-    .Endereco{
-        position: absolute;
-        text-align: center;
-        margin: 245px 0px 0px 400px;
-    }
-
-    .CPF {
-        position: absolute;
-        text-align: center;
-        margin: 245px 0px 0px 693px;
-    }
-
-    .Email{
-        position: absolute;
-        text-align: center;
-        margin: 290px 0px 0px 417px;
-    }
-
-    .senha {
-        position: absolute;
-        text-align: center;
-        margin: 290px 0px 0px 682px;
-    }
-
-    .finalizar {
-        position: absolute;
-        margin: 330px 100px 1500px 600px;
-        font-family: 'Suez One', serif;
-    }
-
-    .letreiro{
-        position: absolute;
-        top: 160px;
-        left: 92px;
-        font-family: 'Suez One', serif;
-        color: black;
-        text-decoration: black;
+        .letreiro {
+            position: absolute;
+            top: 160px;
+            left: 92px;
+            font-family: 'Suez One', serif;
+            color: black;
+            text-decoration: black;
         }
 
-    .fundo {
+        .fundo {
             position: absolute;
-            height: 325px;
+            height: 700px;
             width: 600px;
-            left: 340px;
             top: 85px;
-            background-color: #ffffff;
+            left: calc(50% - 300px);
+            background-color: #cfcbc9;
             border-radius: 10%; 
         }
 
+        .criarconta {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-family: 'Suez One', serif;
+            font-size: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 30px 0;
+            text-align: center;
+            font-family: 'Suez One', serif;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"] {
+            display: block;
+            margin: 0 auto;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        .finalizar {
+            display: inline-block;
+            padding: 10px;
+            margin: 30px 0 0 50%;
+            transform: translateX(-50%);
+            font-family: 'Suez One', serif;
+            background-color: #cfcbc9;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10%;
+        }
     </style>
-
-
 </head>
 <body>
-    
-        <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
-        <a class="letreiro" href="../../index.html">Pet Locator</a>
-        <div class="fundo"></div>
-        <div class="banco_de_dados">
-            <form action="cadastro.php" method="post">
-                <a class="criarconta">Crie uma Conta</a>
-                <label class="Nome">Nome:<input type="text" name="Nome"></input></label>
-                <label class="sobrenome">Sobrenome:<input type="text" name="sobrenome"></input></label>
-                <label class="Data_Nascimento">Data que Nasceu:<input type="date" name="Data_Nascimento"></input></label>
-                <label class="Telefone">Telefone:<input type="number" name="Telefone"></input></label>
-                <label class="Endereco">Endereço:<input type="text" name="Endereco"></input></label>
-                <label class="CPF">CPF:<input name ="CPF" type="number"></input></label>
-                <label class="Email">E-mail:<input type="email" name="Email"></input></label>
-                <label class="senha">Senha:<input type="password" name="senha"></input></label>
-                <a class="finalizar" href="../../index.html">Finalizar Cadastro</a>
+    <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
+    <a class="letreiro" href="../../index.html">Pet Locator</a>
+    <div class="fundo">
+        <form action="saveDatabase.php" method="post">
+            <a class="criarconta">Cadestre seu canil</a>
+            <label class="nome">Nome:<input type="text"></label>
+            <label class="telefone">Sobrenome:<input type="text"></label>
+            <label class="funcionamento">Data de nascimento:<input type="date"></label>
+            <label class="certificado">Telefone:<input type="number"></label>
+            <label class="endereco">Endereço:<input type="text"></label>
+            <label class="cnpj">CNPJ:<input type="number"></label>
+            <label class="email">E-mail:<input type="email"></label>
+            <label class="senha">Senha:<input type="password"></input></label>
+            <a href="../../index.html"class="finalizar">Finalizar Cadastro</a>
             </form>
         </div>
     
