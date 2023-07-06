@@ -10,13 +10,19 @@
 body {
     background: #F3E6DE;
 }
-
+.logo{
+    transition: transform 0.3s ease;
+}
 .letreiro {
     position: absolute;
     top: 95px;
     left: 95px;
     font-family: 'Suez One', serif;
+    transition: transform 0.3s ease;
 }
+.logo:hover {
+            transform: scale(1.1);
+        }
 
 .logoResgate {
     position: absolute;
@@ -130,7 +136,7 @@ body {
 }
 </style>
 <body>
-    <img src="../index/banco de imagens/logosprincipais/logo.png"> 
+    <img class = "logo" src="../index/banco de imagens/logosprincipais/logo.png"> 
     <div class="adotar"></div>
     <h1><a class="Adotexto" href="../index/buscador/buscador cao/buscarcachorros.html">Adotar</a></h1>
     <img class="adopt" src="../index/banco de imagens/logosprincipais/logo_adotar.png" > 

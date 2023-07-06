@@ -16,6 +16,10 @@
         .logo {
             position: absolute;
             top: 60px;
+            transition: transform 0.3s ease;
+        }
+        .logo:hover {
+            transform: scale(1.1);
         }
 
         .letreiro {
@@ -85,7 +89,8 @@
     </style>
 </head>
 <body>
-
+    <img class="logo" src="../../banco de imagens/logosprincipais/logo.png">
+    <a class="letreiro" href="../../index.html">Pet Locator</a>
 
     <div class="fundo">
         <form name="cadastroForm" action="cadastro.php" method="post" onsubmit="return validateForm()">
